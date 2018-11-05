@@ -34,4 +34,8 @@
 
 
 def convert(rates, value, current, to):
+    for conversion in rates:
+        if current in conversion and to in conversion:
+            if current == conversion[0]:
+                return value * conversion[2]
     return value
